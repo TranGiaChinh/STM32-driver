@@ -22,21 +22,6 @@ Modular and reusable code
 
 Documentation and comments for educational clarity
 
-📂 Project Structure
-
-stm32f401re-driver/
- ├── src/               # Source files for drivers
- │   ├── gpio.c         # GPIO driver implementation
- │   ├── usart.c        # USART driver implementation
- │   └── ...            # Other peripherals
- ├── inc/               # Header files
- │   ├── gpio.h
- │   ├── usart.h
- │   └── ...
- ├── examples/          # Example usage for each driver
- │   └── main.c         # Application entry point
- ├── README.md          # This file
-
 🚀 Getting Started
 
 1️⃣ Prerequisites
@@ -66,10 +51,6 @@ Each driver module includes:
 API functions
 
 Register-level implementation
-
-Usage examples
-
-Comments for clarity
 
 📌 Notes
 
