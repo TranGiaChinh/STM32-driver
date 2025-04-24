@@ -34,10 +34,6 @@ Basic knowledge of embedded C
 
 2️⃣ How to Use
 
-Clone the repository:
-
-git clone https://github.com/your-username/stm32f401re-driver.git
-
 Open the project in your preferred IDE (e.g. STM32CubeIDE).
 
 Build and flash the code to your STM32F401RE board.
