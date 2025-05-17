@@ -89,6 +89,10 @@ void GPIO_PeriClockControl (GPIO_RegDef_t *pGPIOx, uint8_t EnorDi)
  */
 void GPIO_Init (GPIO_Handle_t *pGPIOHandle)
 {
+	//enable the peripheral clock
+
+	GPIO_PeriClockControl(pGPIOHandle->pGPIOx, ENABLE);
+
 	uint32_t temp=0;
 	//1. configure the mode of gpio pin
 	if(pGPIOHandle->pGPIO_PinConfig.GPIO_PinMode <= GPIO_MODE_ANAlOG)
@@ -215,7 +219,7 @@ void GPIO_DeInit (GPIO_RegDef_t *pGPIOx)
  * @Note					-
  *
  */
-uint8_t GPIO_ReadFormInputPin (GPIO_RegDef_t *pGPIOx, uint8_t PinNumber)
+uint8_t GPIO_ReadFromInputPin (GPIO_RegDef_t *pGPIOx, uint8_t PinNumber)
 {
 	uint8_t value;
 	value= (uint8_t) ((pGPIOx->IDR >> PinNumber) & 0x00000001);
@@ -236,7 +240,7 @@ uint8_t GPIO_ReadFormInputPin (GPIO_RegDef_t *pGPIOx, uint8_t PinNumber)
  * @Note					-
  *
  */
-uint16_t GPIO_ReadFormInputPort (GPIO_RegDef_t *pGPIOx)
+uint16_t GPIO_ReadFromInputPort (GPIO_RegDef_t *pGPIOx)
 {
 	uint16_t value;
 	value= (uint16_t)pGPIOx->IDR;
